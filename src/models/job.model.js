@@ -3,11 +3,6 @@ const { toJSON, paginate } = require("./plugins");
 
 const jobSchema = mongoose.Schema(
   {
-    id: {
-      type: String,
-      required: true,
-      trim: true,
-    },
     carType: {
       type: String,
       required: true,
