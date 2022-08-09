@@ -8,7 +8,7 @@ const jobSchema = mongoose.Schema(
       required: true,
       trim: true,
     },
-    name: {
+    carType: {
       type: String,
       required: true,
       trim: true,
@@ -18,31 +18,41 @@ const jobSchema = mongoose.Schema(
       required: false,
       trim: true,
     },
-    projectId: {
+    userId: {
       type: String,
       required: true,
       trim: true,
     },
-    status: {
+    driverId: {
       type: String,
       required: true,
       trim: true,
     },
-    startDate: {
-      type: Date,
+    originLat: {
+      type: String,
       required: true,
       trim: true,
     },
-    hours: {
+    originLng: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+    destLat: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+    destLng: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+    price: {
       type: Number,
       required: true,
       trim: true,
-    },
-    endDate: {
-      type: Date,
-      required: true,
-      trim: true,
-    },
+    }
   },
   {
     timestamps: true,

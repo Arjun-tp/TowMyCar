@@ -1,6 +1,7 @@
 const httpStatus = require("http-status");
-const { User } = require("../models");
+const { User, Driver } = require("../models");
 const ApiError = require("../utils/ApiError");
+const {getDriverByEmail} = require("../services/driver.service")
 
 const createUser = async (userBody) => {
   if (await User.isEmailTaken(userBody.email)) {
@@ -10,11 +11,25 @@ const createUser = async (userBody) => {
 };
 
 const loginUser = async (userBody) => {
-  if (await User.isPasswordMatch(userBody.email, userBody.password)) {
-    let email = userBody.email;
-    return getUserByEmail(email);
-  } else {
-    throw new ApiError(httpStatus.BAD_REQUEST, "Not able to login");
+  let findDriver = await getDriverByEmail(userBody.email);
+  if(findDriver) {
+    if (await Driver.isPasswordMatch(userBody.email, userBody.password)) {
+      let email = userBody.email;
+      return getDriverByEmail(email);
+    } else {
+      throw new ApiError(httpStatus.BAD_REQUEST, "Not able to login");
+    }
+  }
+
+  let findUser = await getUserByEmail(userBody.email);
+  if(findUser) {
+    if (await User.isPasswordMatch(userBody.email, userBody.password)) {
+      let email = userBody.email;
+     
+      return getUserByEmail(email);
+    } else {
+      throw new ApiError(httpStatus.BAD_REQUEST, "Not able to login");
+    }
   }
 };
 
