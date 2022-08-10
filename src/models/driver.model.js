@@ -42,6 +42,16 @@ const driverSchema = mongoose.Schema(
       enum: roles,
       default: "driver",
     },
+    phone: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+    isActive: {
+      type: Boolean,
+      trim: true,
+      default: false
+    },
   },
   {
     timestamps: true,

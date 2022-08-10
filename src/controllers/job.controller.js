@@ -29,7 +29,7 @@ const getJob = catchAsync(async (req, res) => {
   if (!job) {
     throw new ApiError(httpStatus.NOT_FOUND, "job not found for id " + req.params.jobId);
   }
-  res.send(project);
+  res.send(job);
 });
 
 const updateJob = catchAsync(async (req, res) => {

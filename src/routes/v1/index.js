@@ -1,7 +1,7 @@
 const express = require('express');
 const authRoute = require('./auth.route');
 const userRoute = require('./user.route');
-// const projectRoute = require('./project.route');
+const carRoute = require('./car.route');
 const jobRoute = require('./job.route');
 
 
@@ -16,10 +16,10 @@ const defaultRoutes = [
     path: '/users',
     route: userRoute,
   },
-  // {
-  //   path: '/project',
-  //   route: projectRoute,
-  // },
+  {
+    path: '/car',
+    route: carRoute,
+  },
   {
     path: '/job',
     route: jobRoute,

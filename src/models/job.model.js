@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const { toJSON, paginate } = require("./plugins");
+const { status } = require("../config/roles");
 
 const jobSchema = mongoose.Schema(
   {
@@ -47,7 +48,12 @@ const jobSchema = mongoose.Schema(
       type: Number,
       required: true,
       trim: true,
-    }
+    },
+    status: {
+      type: String,
+      enum: ["created", "picked_up", "dropped"],
+      default: "created",
+    },
   },
   {
     timestamps: true,

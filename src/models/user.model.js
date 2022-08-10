@@ -37,6 +37,11 @@ const userSchema = mongoose.Schema(
       },
       private: true, // used by the toJSON plugin
     },
+    phone: {
+      type: String,
+      required: true,
+      trim: true,
+    },
     role: {
       type: String,
       enum: roles,

@@ -17,6 +17,7 @@ const queryJobs = async (filter, options) => {
 
 
 const getJobById = async (id) => {
+  console.log(id)
   return Job.findById(id);
 };
 
