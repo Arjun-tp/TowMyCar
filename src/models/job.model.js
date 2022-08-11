@@ -21,7 +21,6 @@ const jobSchema = mongoose.Schema(
     },
     driverId: {
       type: String,
-      required: true,
       trim: true,
     },
     originLat: {
