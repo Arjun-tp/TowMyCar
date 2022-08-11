@@ -29,7 +29,7 @@ const getCar = catchAsync(async (req, res) => {
   if (!car) {
     throw new ApiError(httpStatus.NOT_FOUND, "car not found for id " + req.params.carId);
   }
-  res.send(project);
+  res.send(car);
 });
 
 const updateCar = catchAsync(async (req, res) => {

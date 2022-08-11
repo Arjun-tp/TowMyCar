@@ -8,7 +8,7 @@ const router = express.Router();
 router.get('/getAllJobs', jobController.getJobs)
 // router.get('/getAllJobsForProject/:projectId', jobController.getTasksForProject)
 router.post('/createJob', jobController.createJob)
-router.post('/updateJob/:taskId', jobController.updateJob)
+router.put('/updateJob/:jobId', jobController.updateJob)
 router.get('/getOneJob/:jobId', jobController.getJob)
 
 
