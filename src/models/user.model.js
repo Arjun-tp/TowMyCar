@@ -47,6 +47,18 @@ const userSchema = mongoose.Schema(
       enum: roles,
       default: "user",
     },
+    userLat: {
+      type: String,
+      trim: true,
+    },
+    userLng: {
+      type: String,
+      trim: true,
+    },
+    fcmToken: {
+      type: String,
+      trim: true,
+    },
   },
 
   {

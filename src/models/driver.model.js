@@ -52,6 +52,18 @@ const driverSchema = mongoose.Schema(
       trim: true,
       default: false
     },
+    driverLat: {
+      type: String,
+      trim: true,
+    },
+    driverLng: {
+      type: String,
+      trim: true,
+    },
+    fcmToken: {
+      type: String,
+      trim: true,
+    },
   },
   {
     timestamps: true,
