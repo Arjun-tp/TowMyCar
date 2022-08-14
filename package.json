@@ -11,7 +11,7 @@
     "node": ">=12.0.0"
   },
   "scripts": {
-    "start": "cross-env NODE_ENV=development nodemon src/index.js",
+    "start": "npm start ecosystem.config.json --no-daemon",
     "dev": "cross-env NODE_ENV=development nodemon src/index.js"
   },
   "keywords": [
