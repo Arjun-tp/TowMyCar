@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "333055772501",
+    "project_id": "towmytruck-571bb",
+    "storage_bucket": "towmytruck-571bb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:333055772501:android:afe801f8c8b1d330d5d1dc",
+        "android_client_info": {
+          "package_name": "com.amap.towmyCar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "333055772501-e50vvmd1e5q44emd744k8mump0jqb1u0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA17dgWtWwl4pDexrpSrXZOxmS0HBBTwDg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "333055772501-e50vvmd1e5q44emd744k8mump0jqb1u0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

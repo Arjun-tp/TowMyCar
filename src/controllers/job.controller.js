@@ -1,8 +1,16 @@
 const httpStatus = require("http-status");
 const pick = require("../utils/pick");
+const admin = require("firebase-admin");
+const serviceAccount = require("../firebase.json");
+
 const ApiError = require("../utils/ApiError");
 const catchAsync = require("../utils/catchAsync");
 const { jobService } = require("../services");
+
+// admin.initializeApp({
+//   credential: admin.credential.cert(serviceAccount),
+// });
+
 
 const createJob = catchAsync(async (req, res) => {
   const job = await jobService.createJob(req.body);
@@ -33,6 +41,15 @@ const getJob = catchAsync(async (req, res) => {
 });
 
 const updateJob = catchAsync(async (req, res) => {
+  const tokens = [];
+  // const { title, body, imageUrl } = req.body;
+    // await admin.messaging().sendMulticast({
+    //   tokens,
+    //   notification: {
+    //     title: "Job Updated",
+    //     body: "Test Job"
+    //   },
+    // });
   console.log("job id for update");
   console.log(req.params.jobId);
   const job = await jobService.updateJobById(req.params.jobId, req.body);

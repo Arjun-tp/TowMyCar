@@ -9,6 +9,7 @@ router.post('/createUser', userController.createUser)
 router.post('/loginUser', userController.loginUser)
 router.get('/getOneUser/:userId', userController.getUser)
 router.put('/updateUser/:userId', userController.updateUser)
+router.get('/calculate', userController.calculateDistance);
 
 
 
